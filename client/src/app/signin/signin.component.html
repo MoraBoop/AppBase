@@ -1,0 +1,28 @@
+<p>
+  
+</p>
+<div>
+  {{rs}}
+</div>
+
+<div>
+
+</div>
+
+<form [formGroup]="user" (ngSubmit)="onSubmit()">
+  <p>
+    <label>
+      Usuario
+      <input type="text" formControlName="nick">
+    </label>
+  </p>
+  <p>
+    <label>
+      Clave
+      <input type="text" formControlName="pass">
+    </label>
+  </p>
+  <p>
+    <button type="submit" [disabled]="!user.valid">Submit</button>
+  </p>
+</form>
